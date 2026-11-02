@@ -1,0 +1,1054 @@
+:root{
+    --green-primary:#00A651;
+    --green-dark:#008948;
+    --green-light:#7AC943;
+    --blue-primary:#183B82;
+    --blue-dark:#102A60;
+	--turquoise-primary:#00A6A6;
+    --turquoise-dark:#008F8F;
+    --red:#F44336;
+    --red-light:#FF6B6B;
+    --orange:#F9A11B;
+    --yellow:#F7D100;
+    --offwhite:#F8F8F8;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:var(--offwhite);
+    line-height:1.6;
+    color:#333;
+}
+
+header{
+    background:#fff;
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.header-container{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:10px 20px;
+}
+
+.logo{
+    height:90px;
+    width:auto;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:var(--blue-primary);
+    font-weight:bold;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:var(--green-primary);
+}
+
+.burger{
+    display:none;
+    font-size:2rem;
+    cursor:pointer;
+    background:none;
+    border:none;
+}
+
+.hero{
+    text-align:center;
+    padding:80px 20px;
+}
+
+.hero h1{
+    color:var(--green-primary);
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    margin-bottom:30px;
+}
+
+.email-btn{
+    display:inline-block;
+
+    padding:8px 16px;
+    min-width:260px;
+
+    background:linear-gradient(
+        90deg,
+        #0f8f96 0%,
+        #0ca38a 30%,
+        #00b47d 70%,
+        #00c56f 100%
+    );
+
+    color:#ffffff;
+    text-decoration:none;
+    font-weight:700;
+
+    border:none;
+    border-radius:50px;
+
+    box-shadow:
+        0 4px 12px rgba(0,166,81,0.25),
+        inset 0 1px 1px rgba(255,255,255,0.25);
+
+    transition:all 0.3s ease;
+}
+
+.email-btn:hover{
+    background:linear-gradient(
+        90deg,
+        #0a7e84 0%,
+        #0a937d 30%,
+        #009d6c 70%,
+        #00ae61 100%
+    );
+
+    transform:translateY(-2px);
+}
+
+.email-btn::after{
+    content:" →";
+    font-size:1.2rem;
+}
+
+img{
+    vertical-align: middle;
+}
+
+.gallery{
+    max-width:1200px;
+    margin:auto;
+    padding:40px 20px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+}
+
+.gallery img{
+    width:100%;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,.1);
+}
+
+.content{
+    max-width:1000px;
+    margin:auto;
+    padding:60px 20px;
+}
+
+.content h1{
+    color:var(--blue-primary);
+    margin-bottom:20px;
+}
+
+.content p{
+    margin-bottom:15px;
+}
+
+footer{
+    background:var(--blue-primary);
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:50px;
+}
+
+.active-page{
+    color:var(--green-primary) !important;
+}
+
+@media (max-width:768px){
+
+    .burger{
+        display:block;
+    }
+
+    .nav-links{
+        display:none;
+        width:100%;
+        flex-direction:column;
+        padding-top:20px;
+        gap:15px;
+        text-align:center;
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .header-container{
+        flex-wrap:wrap;
+    }
+}
+.strapline{
+    display:block;
+    max-width:700px;
+    width:100%;
+    margin:0 auto 30px;
+}
+
+.showcase{
+    padding:60px 20px;
+    text-align:center;
+    background:white;
+}
+
+.showcase h2{
+    color:var(--blue-primary);
+    margin-bottom:30px;
+}
+
+.showcase-image{
+    width:100%;
+    max-width:1100px;
+    border-radius:12px;
+    box-shadow:0 6px 20px rgba(0,0,0,0.15);
+}
+
+.active-page{
+    color: #00A651;
+    font-weight: bold;
+}
+.hero-buttons{
+    display:flex;
+    gap:20px;
+    justify-content:center;
+    flex-wrap:wrap;
+    margin-top:30px;
+}
+
+.green-button,
+.white-button{
+    display:inline-block;
+    padding:6px 6px;
+    border-radius:20px;
+    font-size:1rem;
+    font-weight:700;
+    text-decoration:none;
+    transition:all 0.3s ease;
+    text-align:center;
+    min-width:200px;
+}
+
+/* Green Button */
+
+.green-button{
+    display:inline-block;
+    padding:6px 6px;
+    min-width:200px;
+
+    background:linear-gradient(
+        90deg,
+        #0f8f96 0%,
+        #0ca38a 30%,
+        #00b47d 70%,
+        #00c56f 100%
+    );
+
+    color:#ffffff;
+    font-weight:700;
+    font-size:1rem;
+    text-decoration:none;
+
+    border-radius:20px;
+    border:none;
+
+    box-shadow:
+        0 4px 12px rgba(0,166,81,0.25),
+        inset 0 1px 1px rgba(255,255,255,0.25);
+
+    transition:all 0.3s ease;
+}
+
+.green-button:hover{
+    background:linear-gradient(
+        90deg,
+        #0a7e84 0%,
+        #0a937d 30%,
+        #009d6c 70%,
+        #00ae61 100%
+    );
+
+    transform:translateY(-2px);
+}
+
+/* White Button */
+
+.white-button{
+    background:#ffffff;
+    color:#183B82;
+    border:3px solid #6FD3CE;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+
+.white-button:hover{
+    background:#f8f8f8;
+    border-color:#00A651;
+    transform:translateY(-2px);
+}
+@media (max-width:768px){
+
+    .hero-buttons{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .green-button,
+    .white-button{
+        width:100%;
+        max-width:350px;
+    }
+}
+.green-button::after,
+.white-button::after{
+    content:" →";
+    font-size:1.2rem;
+}
+.dark-blue-text{
+    color:var(--blue-primary);
+}
+
+.turquoise-text{
+    color:var(--turquoise-primary);
+}
+.hero-split{
+    display:flex;
+    align-items:center;
+    gap:10px;    
+	max-width:1200px;   
+    margin:0 auto;
+    padding:20px;          /* same side padding as .content */
+}
+
+.hero-content{
+    flex:1 1 60%;
+    text-align:left;
+}
+
+/* Row: leaves | heading | glow */
+.hero-top{
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:clamp(8px, 1.5vw, 20px);
+    margin-bottom:10px;
+}
+
+.hero-image{
+    flex:1 1 40%;
+}
+
+.hero-image img{
+    width:100%;
+    height:auto;
+    display:block;
+}
+
+/* Leaves: top left of the content column */
+.hero-leaves{
+    width:clamp(35px, 4.5vw, 60px);
+    height:auto;
+    flex-shrink:0;
+    mix-blend-mode:multiply;
+}
+
+/* Heading */
+.hero-heading{
+    flex:1 1 auto;
+    min-width:0;
+}
+
+.hero-text{
+    display:block;
+    font-family:'Fredoka', Arial, Helvetica, sans-serif;
+    font-weight:bolder;
+    font-size:clamp(1.5rem, 3vw, 2.8rem);
+    line-height:1.15;text-align:center;
+}
+
+/* Pink glow: top right of the heading */
+.hero-glow{
+    width:clamp(24px, 3vw, 40px);
+    height:auto;
+    flex-shrink:0;
+    mix-blend-mode:multiply;
+}
+
+/* Spans the full row, so it runs from the leaves to the glow */
+.hero-subtext{
+    margin-bottom:20px;
+    font-size:clamp(0.95rem, 1.4vw, 1.1rem);
+    color:var(--blue-primary);
+	text-align:center;	
+	font-weight: bolder;
+}
+
+/* Buttons: left-aligned in this layout */
+.hero-split .hero-buttons{
+    justify-content:center;
+    margin-top:0;
+}
+
+.green-button,
+.white-button{
+    cursor:pointer;
+    font-family:inherit;
+}
+
+/* Stack on tablets and phones */
+@media (max-width:768px){
+    .hero-split{
+        flex-direction:column;
+    }
+
+    .hero-content,
+    .hero-image{
+        flex:1 1 auto;
+        width:100%;
+    }
+
+    .hero-split .hero-buttons{
+        justify-content:center;
+    }
+}
+
+/* ---------- Our mission banner ---------- */
+
+.mission-banner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    max-width:1200px;
+    margin:40px auto;
+    padding:20px 30px;
+    background:#F1F6F3;              /* same pale green-grey as the research banner */
+    border-radius:12px;
+}
+
+.mission-text{
+    flex:1 1 auto;
+    min-width:0;
+    text-align:center;
+}
+
+/* Title with the glow at its left */
+.mission-title-row{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    margin-bottom:8px;
+}
+
+.mission-title{
+    font-family:'Fredoka', Arial, Helvetica, sans-serif;
+    font-weight:600;
+    font-size:clamp(1.4rem, 2.6vw, 2rem);
+    color:var(--blue-primary);
+}
+
+.mission-glow{
+    width:clamp(18px, 2vw, 28px);
+    height:auto;
+    mix-blend-mode:multiply;
+}
+
+.mission-subtitle{
+    font-family:'Fredoka', Arial, Helvetica, sans-serif;
+    font-weight:600;
+    font-size:clamp(1.1rem, 2.4vw, 1.9rem);
+    line-height:1.3;
+    color:var(--blue-primary);
+    max-width:32em;
+    margin:0 auto 10px;
+}
+
+.mission-body{
+    font-size:clamp(0.85rem, 1.3vw, 1.05rem);
+    color:var(--blue-primary);
+}
+
+/* Blueberries left, apple right */
+.mission-fruit{
+    width:clamp(70px, 12vw, 170px);
+    height:auto;
+    flex-shrink:0;
+    mix-blend-mode:multiply;         /* blends the image backgrounds into the banner */
+}
+
+/* Smaller fruit on phones, so the text has room */
+@media (max-width:600px){
+    .mission-banner{
+        padding:20px 12px;
+        gap:8px;
+    }
+
+    .mission-fruit{
+        width:55px;
+    }
+}
+
+/* ---------- How it works ---------- */
+
+.hiw{
+    max-width:1200px;
+    margin:0 auto;
+    padding:40px 20px;
+}
+
+/* Title with a glow either side */
+.hiw-title-row{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:clamp(8px, 1.5vw, 16px);
+    margin-bottom:30px;
+}
+
+.hiw-title{
+    font-family:'Fredoka', Arial, Helvetica, sans-serif;
+    font-weight:600;
+    font-size:clamp(1.6rem, 3vw, 2.4rem);
+    color:var(--blue-primary);
+}
+
+.hiw-glow{
+    width:clamp(18px, 2.2vw, 30px);
+    height:auto;
+    mix-blend-mode:multiply;
+}
+
+/* Row: step | arrow | step | arrow | step */
+.hiw-steps{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:clamp(8px, 1.5vw, 20px);
+}
+
+.hiw-step{
+    flex:1 1 0;                    /* three equal-width steps */
+    min-width:0;
+    display:flex;
+    align-items:center;
+    gap:clamp(10px, 1.5vw, 18px);
+}
+
+.hiw-icon{
+    width:clamp(70px, 9vw, 120px);
+    height:auto;
+    flex-shrink:0;
+    mix-blend-mode:multiply;       /* hides the white image background */
+}
+
+.hiw-text h3{
+    font-family:'Fredoka', Arial, Helvetica, sans-serif;
+    font-weight:600;
+    font-size:clamp(1rem, 1.5vw, 1.2rem);
+    line-height:1.2;
+    color:var(--blue-primary);
+    margin-bottom:6px;
+}
+
+.hiw-text p{
+    font-size:clamp(0.85rem, 1.15vw, 0.95rem);
+    line-height:1.4;
+    color:var(--blue-primary);
+}
+
+.hiw-arrow{
+    flex:0 0 auto;
+    width:clamp(14px, 1.8vw, 24px);
+    height:auto;
+    mix-blend-mode:multiply;
+}
+
+/* Stack the steps on tablets and phones */
+@media (max-width:768px){
+    .hiw-steps{
+        flex-direction:column;
+        gap:12px;
+    }
+
+    .hiw-step{
+        flex:none;
+        width:100%;
+        max-width:420px;
+    }
+
+    .hiw-icon{
+        width:90px;
+    }
+
+    .hiw-arrow{
+        width:20px;
+        transform:rotate(90deg);   /* arrows point down when stacked */
+    }
+}
+
+/* ---------- Nutrition and research banner ---------- */
+
+.research-banner{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    max-width:1200px;
+    margin:40px auto;
+    padding:30px 40px;
+    background:#eef5f2;              /* pale green-grey from the design */
+    border-radius:12px;
+}
+
+.research-text{
+    flex:1 1 45%;
+    min-width:0;
+}
+
+.research-image{
+    flex:1 1 55%;
+    min-width:0;
+}
+
+.research-image img{
+    width:100%;
+    height:auto;
+    display:block;
+    mix-blend-mode:multiply;         /* blends the image's pale background into the box */
+}
+
+/* Title with the glow at its top right */
+.research-title-row{
+    display:flex;
+    align-items:flex-start;
+    gap:8px;
+    margin-bottom:10px;
+}
+
+.research-title{
+    font-family:'Fredoka', Arial, Helvetica, sans-serif;
+    font-weight:600;
+    font-size:clamp(1.5rem, 3vw, 2.4rem);
+    line-height:1.15;
+    color:var(--blue-primary);
+}
+
+.research-glow{
+    width:clamp(18px, 2vw, 28px);
+    height:auto;
+    margin-top:-4px;
+    flex-shrink:0;
+    mix-blend-mode:multiply;
+}
+
+.research-subtitle{
+    font-size:clamp(1.05rem, 1.8vw, 1.4rem);
+    font-weight:700;
+    line-height:1.3;
+    color:var(--blue-primary);
+    margin-bottom:12px;
+}
+
+.research-body{
+    font-size:clamp(0.9rem, 1.3vw, 1.05rem);
+    color:var(--blue-primary);
+    margin-bottom:18px;
+}
+
+.research-link{
+    font-weight:700;
+    font-size:1.05rem;
+    color:var(--turquoise-dark);
+    text-decoration:none;
+}
+
+.research-link::after{
+    content:" →";
+}
+
+.research-link:hover{
+    text-decoration:underline;
+}
+
+/* Stack on tablets and phones */
+@media (max-width:768px){
+    .research-banner{
+        flex-direction:column;
+        padding:25px 20px;
+    }
+
+    .research-text,
+    .research-image{
+        flex:1 1 auto;
+        width:100%;
+    }
+}
+/* ---------- Meet the team + FAQs ---------- */
+
+.tf{
+    display:flex;
+    gap:20px;
+    max-width:1200px;
+    margin:40px auto;
+    padding:0 20px;
+    align-items:stretch;
+}
+
+.tf-panel{
+    background:#eef1f7;                /* pale blue-grey panel */
+    border-radius:8px;
+    padding:clamp(14px, 2vw, 24px);
+    position:relative;
+    min-width:0;
+}
+
+.tf-team{
+    flex:1.4 1 0;                      /* left panel is wider */
+    display:flex;
+    align-items:center;
+    gap:clamp(12px, 2vw, 24px);
+}
+
+.tf-faqs{
+    flex:1 1 0;
+}
+
+/* Photo cropped to a circle */
+.tf-photo{
+    width:clamp(110px, 16vw, 190px);
+    aspect-ratio:1 / 1;
+    object-fit:cover;
+    border-radius:50%;
+    flex-shrink:0;
+}
+
+.tf-team-text{
+    min-width:0;
+}
+
+/* Titles with glows */
+.tf-title-row{
+    display:flex;
+    align-items:flex-start;
+    gap:8px;
+    margin-bottom:8px;
+}
+
+.tf-title{
+    font-family:'Fredoka', Arial, Helvetica, sans-serif;
+    font-weight:600;
+    font-size:clamp(1.3rem, 2.2vw, 1.8rem);
+    line-height:1.2;
+    color:var(--blue-primary);
+}
+
+.tf-glow{
+    width:clamp(16px, 1.8vw, 24px);
+    height:auto;
+    flex-shrink:0;
+    mix-blend-mode:multiply;
+}
+
+.tf-subtitle{
+    font-weight:700;
+    font-size:clamp(1rem, 1.5vw, 1.15rem);
+    line-height:1.3;
+    color:var(--blue-primary);
+    margin-bottom:10px;
+}
+
+.tf-body{
+    font-size:clamp(0.85rem, 1.1vw, 0.95rem);
+    line-height:1.45;
+    color:var(--blue-primary);
+    margin-bottom:12px;
+}
+
+.tf-link{
+    font-weight:700;
+    color:var(--turquoise-dark);
+    text-decoration:none;
+}
+
+.tf-link::after{
+    content:" →";
+}
+
+.tf-link:hover{
+    text-decoration:underline;
+}
+
+/* Leaves at the top right of the FAQ panel */
+.tf-leaves{
+    position:absolute;
+    top:8px;
+    right:14px;
+    width:clamp(36px, 4.5vw, 56px);
+    height:auto;
+    mix-blend-mode:multiply;
+}
+
+/* FAQ accordion */
+.tf-faq{
+    background:#fff;
+    border-radius:10px;
+    box-shadow:0 2px 6px rgba(0,0,0,0.06);
+    margin-bottom:10px;
+}
+
+.tf-faq summary{
+    cursor:pointer;
+    list-style:none;
+    position:relative;
+    padding:12px 44px 12px 16px;
+    font-family:'Fredoka', Arial, Helvetica, sans-serif;
+    font-weight:600;
+    font-size:clamp(0.9rem, 1.2vw, 1rem);
+    color:var(--blue-primary);
+}
+
+.tf-faq summary::-webkit-details-marker{
+    display:none;
+}
+
+/* Chevron */
+.tf-faq summary::after{
+    content:"";
+    position:absolute;
+    right:18px;
+    top:50%;
+    width:8px;
+    height:8px;
+    border-right:2px solid var(--blue-primary);
+    border-bottom:2px solid var(--blue-primary);
+    transform:translateY(-70%) rotate(45deg);
+    transition:transform .2s ease;
+}
+
+.tf-faq[open] summary::after{
+    transform:translateY(-30%) rotate(-135deg);   /* flips up when open */
+}
+
+.tf-faq p{
+    padding:0 16px 14px;
+    font-size:0.9rem;
+    color:var(--blue-primary);
+}
+
+/* Stack on tablets and phones */
+@media (max-width:900px){
+    .tf{
+        flex-direction:column;
+    }
+}
+
+@media (max-width:500px){
+    .tf-team{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .tf-title-row{
+        justify-content:center;
+    }
+}
+/* ---------- Call-to-action banner ---------- */
+
+.cta{
+    background:linear-gradient(90deg, #6f2cac 0%, #a02aa5 50%, #d6209c 100%);
+    padding:24px 20px;
+    margin-top:40px;
+}
+
+.cta-inner{
+    max-width:1200px;
+    margin:0 auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:24px;
+}
+
+.cta-message{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    flex:1 1 40%;
+    min-width:0;
+}
+
+.cta-title{
+    font-family:'Fredoka', Arial, Helvetica, sans-serif;
+    font-weight:600;
+    font-size:clamp(1.3rem, 2.4vw, 2rem);
+    line-height:1.2;
+    color:#fff;
+}
+
+.cta-leaves{
+    width:clamp(34px, 4vw, 56px);
+    height:auto;
+    flex-shrink:0;
+}
+
+.cta-glow{
+    width:clamp(18px, 2vw, 28px);
+    height:auto;
+    flex-shrink:0;
+    align-self:flex-end;
+}
+
+/* Turns white-background images into light shapes on dark backgrounds */
+.knockout{
+    filter:grayscale(1) invert(1) brightness(1.4);
+    mix-blend-mode:screen;
+}
+
+/* Form row */
+.cta-form{
+    display:flex;
+    align-items:flex-end;
+    gap:12px;
+    flex:1 1 60%;
+    min-width:0;
+}
+
+.cta-form label{
+    flex:1 1 0;
+    min-width:0;
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+    font-size:0.8rem;
+    font-weight:700;
+    color:#fff;
+}
+
+.cta-form input{
+    width:100%;
+    padding:10px 12px;
+    border:none;
+    border-radius:8px;
+    font-size:0.9rem;
+    font-family:inherit;
+}
+
+.cta-form .green-button{
+    flex:0 0 auto;
+    padding:10px 20px;
+    min-width:0;
+    white-space:nowrap;
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer{
+    background:#fff;
+    color:var(--blue-primary);
+    margin-top:0;
+    padding:24px 20px;
+}
+
+.site-footer-inner{
+    max-width:1200px;
+    margin:0 auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.footer-logo{
+    height:clamp(60px, 8vw, 90px);
+    width:auto;
+    flex-shrink:0;
+}
+
+.footer-text{
+    text-align:center;
+    font-size:0.9rem;
+}
+
+.footer-strong{
+    font-weight:700;
+}
+
+.footer-text a{
+    color:var(--blue-primary);
+    text-decoration:none;
+}
+
+.footer-text a:hover{
+    text-decoration:underline;
+}
+
+.footer-copy{
+    font-size:0.8rem;
+    margin-top:6px;
+    opacity:0.8;
+}
+
+.footer-leaves{
+    width:clamp(40px, 6vw, 70px);
+    height:auto;
+    flex-shrink:0;
+    mix-blend-mode:multiply;     /* white background disappears on the white footer */
+}
+
+/* Stack on tablets and phones */
+@media (max-width:900px){
+    .cta-inner{
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .cta-form{
+        flex-wrap:wrap;
+    }
+
+    .cta-form label{
+        flex:1 1 200px;
+    }
+}
+
+@media (max-width:600px){
+    .site-footer-inner{
+        flex-direction:column;
+    }
+
+    .cta-form .green-button{
+        width:100%;
+        max-width:none;
+    }
+}
+
+.straplines {
+	display: block;      /* needed so auto margins can centre it */
+	margin: 0 auto;      /* centres horizontally */
+	width: 80%;          /* resize relative to the container */
+	max-width: 900px;    /* never grow bigger than this */
+	height: auto;        /* keeps the correct proportions */
+}
