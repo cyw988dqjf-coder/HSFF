@@ -1052,3 +1052,28 @@ footer{
 	max-width: 900px;    /* never grow bigger than this */
 	height: auto;        /* keeps the correct proportions */
 }
+
+.team-member{
+    background:#fff;
+    padding:30px;
+    margin:30px 0;
+    border-radius:12px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+}
+
+.team-header{
+    display:flex;
+    gap:20px;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.team-header img{
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.team-role{
+    color:var(--green-primary);
