@@ -24,6 +24,32 @@ document.getElementById("header").innerHTML = `
 </header>
 `;
 
+document.getElementById("footer").innerHTML=`
+<footer class="site-footer">
+	<div class="site-footer-inner">
+
+		<img class="footer-logo" src="images/hsfs-small-logo.png" alt="Healthy Starts For Schools">
+
+		<div class="footer-text">
+			<p class="footer-strong">Healthy Starts for Schools &bull; Led by Karen Storey</p>
+			<p>
+				&bull;
+				<a href="#">Privacy</a> &bull;
+				<a href="#" id="contact-footer-link">Contact</a>
+				&bull;
+			</p>
+			<p class="footer-copy">© 2026 Healthy Starts For Schools</p>
+		</div>
+
+		<img class="footer-leaves" src="images/leaves-right.png" alt="" aria-hidden="true">
+
+	</div>
+</footer>
+<footer>
+© 2026 Healthy Starts For Schools
+</footer>
+`;
+
 const burger = document.getElementById("burger");
 const navLinks = document.getElementById("navLinks");
 
@@ -42,4 +68,45 @@ document.querySelectorAll('.nav-links a').forEach(link => {
         link.classList.add('active-page');
     }
 
+});
+
+document.getElementById('get-in-touch').addEventListener('click', () => {
+
+    const subject = encodeURIComponent('Health Squad Enquiry');
+
+    const body = encodeURIComponent(
+`I'd like reach out to the health squad for some more information.
+
+Name:
+
+Organisation:
+
+Contact number:
+
+Best time to call:
+
+Tell us some more about your enquiry:`
+    );
+
+    window.location.href =
+        `mailto:info@healthstartsforschools.co.uk?subject=${subject}&body=${body}`;
+});
+document.getElementById('contact-footer-link').addEventListener('click', (e) => {
+    e.preventDefault();
+
+    const subject = encodeURIComponent('Health Squad Enquiry');
+    const body = encodeURIComponent(`I'd like to reach out to the health squad for some more information.
+
+Name:
+
+Organisation:
+
+Contact number:
+
+Best time to call:
+
+Tell us some more about your enquiry:`);
+
+    window.location.href =
+        `mailto:info@healthystartsforschools.co.uk?subject=${subject}&body=${body}`;
 });
