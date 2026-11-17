@@ -49,14 +49,16 @@ setHTML('header', `
         </a>
 
         <nav>
-            <button class="burger" id="burger">☰</button>
+            <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
+				<img src="images/pill-menu.png" alt="menu" title="Menu" class="burger-img">
+			</button>
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="mission.html">Our Mission</a></li>
-                <li><a href="howitworks.html">How It Works</a></li>
-                <li><a href="nutritionresearch.html">Nutrition and Research</a></li>
-                <li><a href="faqs.html">FAQs</a></li>
-                <li><a href="team.html">Team</a></li>
+				<li><a href="mission.html">Our <br>Mission</a></li>
+				<li><a href="howitworks.html">How It <br>Works</a></li>
+				<li><a href="nutritionresearch.html">Nutrition and <br>Research</a></li>
+				<li><a href="faqs.html">FAQs</a></li>
+				<li><a href="team.html">Team</a></li>
             </ul>
         </nav>
         <button class="green-button" id="get-in-touch">Get in touch</button>
@@ -93,7 +95,8 @@ const navLinks = document.getElementById('navLinks');
 
 if (burger && navLinks) {
     burger.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
+        const open = navLinks.classList.toggle('active');
+        burger.setAttribute('aria-expanded', open);
     });
 }
 

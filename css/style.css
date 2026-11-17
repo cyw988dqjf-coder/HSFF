@@ -47,7 +47,9 @@ header{
     height:90px;
     width:auto;
 }
-
+@media (max-width:1200px){
+    .logo{ height:70px; }
+}
 .nav-links{
     display:flex;
     list-style:none;
@@ -66,12 +68,20 @@ header{
 }
 
 .burger{
-    display:none;
-    font-size:2rem;
-    cursor:pointer;
+    display:none;            /* shown on mobile by your existing media query */
     background:none;
     border:none;
+    padding:0;
+    cursor:pointer;
+    line-height:0;           /* removes extra space around the image */
 }
+
+.burger-img{
+    height:30px;             /* adjust to taste */
+    width:auto;
+    display:block;    
+}
+.burger:hover .burger-img{ opacity:0.8; }
 
 .hero{
     text-align:center;
@@ -456,7 +466,7 @@ footer{
     max-width:1200px;
     margin:40px auto;
     padding:20px 30px;
-    background:#F1F6F3;              /* same pale green-grey as the research banner */
+    background:#eef5f2;              /* same pale green-grey as the research banner */
     border-radius:12px;
 }
 
@@ -1087,4 +1097,74 @@ footer{
 }
 
 .team-role{
-    color:var(--green-primary);
+    color:var(--green-primary);	
+}
+.header-container{
+    gap:20px;
+}
+
+.nav-links{
+    align-items:center;                 /* centres 1-line and 2-line links on the same midline */
+    gap:clamp(14px, 1.8vw, 28px);
+}
+
+.nav-links a{
+    display:block;
+    text-align:center;
+    line-height:1.25;
+    white-space:nowrap;                 /* only wraps where the <br> is */
+}
+
+#get-in-touch{
+    flex-shrink:0;
+    min-width:0;                        /* overrides the 200px from .green-button */
+    padding:8px 22px;
+    line-height:1.25;
+    text-align:center;
+    white-space:nowrap;
+}
+
+@media (max-width:768px){
+
+    .nav-links br{
+        display:none;            /* menu items on a single line */
+    }
+
+    nav{
+        display:contents;        /* burger and menu become direct children of the header */
+    }
+
+    .header-container > a{
+        order:1;
+        margin-right:auto;       /* pushes the button and burger to the right */
+    }
+
+    #get-in-touch{
+        order:2;
+        width:auto;
+        max-width:none;
+    }
+
+    .burger{
+        order:3;                 /* far right */
+    }
+
+    .nav-links{
+        order:4;                 /* drops to its own full-width row when opened */
+    }
+}
+@media (max-width:480px){
+    .logo{
+        height:50px;
+    }
+
+    #get-in-touch{
+        padding:8px 14px;
+        font-size:0.9rem;
+    }
+
+    .header-container{
+        gap:10px;
+        padding:10px 12px;
+    }
+}
