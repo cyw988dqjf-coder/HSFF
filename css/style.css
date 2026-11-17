@@ -1175,20 +1175,36 @@ footer{
     }
 }
 @media (max-width:480px){
+
+    .header-container{
+        gap:8px;
+        padding:8px 12px;
+    }
+
+    .header-container > a{
+        min-width:0;
+        flex:0 1 auto;           /* lets the logo shrink if space runs out */
+    }
+
     .logo{
-        height:50px;
+        height:44px;
+        max-width:100%;
     }
 
     #get-in-touch{
-        padding:8px 14px;
-        font-size:0.9rem;
+        padding:7px 14px;
+        font-size:0.85rem;
     }
 
-    .header-container{
-        gap:10px;
-        padding:10px 12px;
+    #get-in-touch::after{
+        content:none;            /* drops the arrow to save width */
+    }
+
+    .burger-img{
+        height:26px;
     }
 }
+
 .mini-green-button{
     display:inline-block;
     margin-left:6px;

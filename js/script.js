@@ -61,7 +61,7 @@ setHTML('header', `
 				<li><a href="team.html">Team</a></li>
             </ul>
         </nav>
-        <button class="green-button" id="get-in-touch">Get in touch</button>
+        <button class="green-button" id="get-in-touch">Get in <br>touch</button>
     </div>
 </header>
 `);
