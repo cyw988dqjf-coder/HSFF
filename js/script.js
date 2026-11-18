@@ -144,5 +144,5 @@ onClick('register-your-interest', () => openEnquiry({
 
 onClick('invite-us-to-your-school', () => openEnquiry({
     intro: "I'd like to invite the Health Squad to our school.",
-    subject: "Invite the Health Crew To Our School"
+    subject: "School invitation enquiry"
 }));
