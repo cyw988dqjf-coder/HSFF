@@ -136,3 +136,10 @@ onClick('get-in-touch-nutrition', (e) => {
         closing: 'Tell us some more about your nutrition and research enquiry:'
     });
 });
+onClick('register-your-interest', () => openEnquiry({
+    intro: "I'd like to register my interest in Healthy Starts for Schools."
+}));
+
+onClick('invite-us-to-your-school', () => openEnquiry({
+    intro: "I'd like to invite the Health Squad to our school."
+}));
