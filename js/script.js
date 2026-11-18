@@ -21,7 +21,8 @@ function openEnquiry({
     name = '',
     email = null,            // null = don't include an Email line
     organisation = '',
-    closing = 'Tell us some more about your enquiry:'
+    closing = 'Tell us some more about your enquiry:',
+    subject = 'Health Squad Enquiry'   // ← default subject
 } = {}) {
     const lines = [intro, '', `Name: ${name}`, ''];
     if (email !== null) lines.push(`Email: ${email}`, '');
@@ -32,9 +33,9 @@ function openEnquiry({
         closing
     );
 
-    const subject = encodeURIComponent('Health Squad Enquiry');
+    const encodedSubject = encodeURIComponent(subject);
     const body = encodeURIComponent(lines.join('\n'));
-    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodedSubject}&body=${body}`;
 }
 
 /* ---------- header & footer ---------- */
@@ -137,9 +138,11 @@ onClick('get-in-touch-nutrition', (e) => {
     });
 });
 onClick('register-your-interest', () => openEnquiry({
-    intro: "I'd like to register my interest in Healthy Starts for Schools."
+    intro: "I'd like to register my interest in Healthy Starts for Schools.",
+    subject: "Register interest with the Health Crew"
 }));
 
 onClick('invite-us-to-your-school', () => openEnquiry({
-    intro: "I'd like to invite the Health Squad to our school."
+    intro: "I'd like to invite the Health Squad to our school.",
+    subject: "Invite the Health Crew To Our School"
 }));
