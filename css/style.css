@@ -1123,7 +1123,9 @@ footer{
 .header-container{
     gap:20px;
 }
-
+.width90pc{
+	width:90%
+}
 .nav-links{
     align-items:center;                 /* centres 1-line and 2-line links on the same midline */
     gap:clamp(14px, 1.8vw, 28px);
