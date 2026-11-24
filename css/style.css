@@ -1521,7 +1521,9 @@ Squiggle height and shape: change the 5px in background-size (100% 5px) for a ta
 Colours: I estimated the hex values from your image, in order: light pink, hot pink, magenta, purple, green, teal-green, cyan, light blue. To tune them, change the stop-color values. Note that # must be written as %23 inside the CSS.
 -------------------------------------------------*/
 :root{
-    --squiggle:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 12' preserveAspectRatio='none'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='0'><stop offset='0' stop-color='%23f77fc6'/><stop offset='0.10' stop-color='%23f72fa8'/><stop offset='0.25' stop-color='%23d41cae'/><stop offset='0.38' stop-color='%239a1ec3'/><stop offset='0.55' stop-color='%2355b82c'/><stop offset='0.70' stop-color='%2340bd5e'/><stop offset='0.85' stop-color='%230bb5d8'/><stop offset='1' stop-color='%234cc9f0'/></linearGradient></defs><path d='M0 8 C 80 1, 160 1, 250 6 S 420 12, 500 6 S 650 0, 750 6 S 920 12, 1000 4' fill='none' stroke='url(%23g)' stroke-width='1' stroke-linecap='round' vector-effect='non-scaling-stroke'/></svg>");
+    --squiggle:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 12' preserveAspectRatio='none'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='0'><stop offset='0' stop-color='%23f77fc6'/><stop offset='0.10' stop-color='%23f72fa8'/><stop offset='0.25' stop-color='%23d41cae'/><stop offset='0.38' stop-color='%239a1ec3'/><stop offset='0.55' stop-color='%2355b82c'/><stop offset='0.70' stop-color='%2340bd5e'/><stop offset='0.85' stop-color='%230bb5d8'/><stop offset='1' stop-color='%234cc9f0'/></linearGradient></defs><path d='M0 8 C 80 1, 160 1, 250 6 S 420 12, 500 6 S 650 0, 750 6 S 920 12, 1000 4' fill='none' stroke='url(%23g)' stroke-width='2' stroke-linecap='round' vector-effect='non-scaling-stroke'/></svg>");
+
+    --squiggle-thick:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 16' preserveAspectRatio='none'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='0'><stop offset='0' stop-color='%23f77fc6'/><stop offset='0.10' stop-color='%23f72fa8'/><stop offset='0.25' stop-color='%23d41cae'/><stop offset='0.38' stop-color='%239a1ec3'/><stop offset='0.55' stop-color='%2355b82c'/><stop offset='0.70' stop-color='%2340bd5e'/><stop offset='0.85' stop-color='%230bb5d8'/><stop offset='1' stop-color='%234cc9f0'/></linearGradient></defs><path d='M0 10 C 80 3, 160 3, 250 8 S 420 14, 500 8 S 650 2, 750 8 S 920 14, 1000 6' fill='none' stroke='url(%23g)' stroke-width='4' stroke-linecap='round' vector-effect='non-scaling-stroke'/></svg>");
 }
 
 .story-row + .story-row{
@@ -1602,4 +1604,9 @@ Colours: I estimated the hex values from your image, in order: light pink, hot p
     height:12px;
     margin:24px 0;
     background:var(--squiggle) no-repeat center / 100% 12px;
+}
+.squiggle-divider-thick{
+    height:16px;
+    margin:24px 0;
+    background:var(--squiggle-thick) no-repeat center / 100% 16px;
 }
