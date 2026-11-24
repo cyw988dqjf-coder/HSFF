@@ -1333,3 +1333,21 @@ footer{
         gap:12px;
     }
 }
+
+.ingredients-row{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:16px;
+    max-width:1000px;
+    margin:30px auto;
+}
+
+.ingredients-img{
+    flex:0 1 calc((100% - 32px) / 3);   /* exactly a third of the row, minus the gaps */
+    min-width:260px;                    /* smallest size before wrapping */
+    aspect-ratio:7 / 6;                 /* every image gets the same shape */
+    object-fit:cover;                   /* fills that shape without stretching */
+    height:auto;
+    display:block;
+}
